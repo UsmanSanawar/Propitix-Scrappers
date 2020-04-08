@@ -111,8 +111,8 @@ if __name__ == '__main__':
     dbname = 'property'
     connection = mysql.connector.connect(host='localhost',
                                          database='property',
-                                         user='root',
-                                         password='')
+                                         user=dbusername,
+                                         password=dbpassword)
     mySql_Create_Table_Query = """CREATE TABLE {} ( 
          Id int NOT NULL AUTO_INCREMENT,
          Title text NOT NULL,
