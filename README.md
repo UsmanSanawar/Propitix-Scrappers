@@ -1,3 +1,3 @@
 # propertix-Scrapping
 - install `requirements.txt`
-- Add base path and Mysql db credentials in `config.py` file
+- Add base path, Mysql db credentials and host name  in `config.py` file
