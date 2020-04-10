@@ -109,8 +109,8 @@ if __name__ == '__main__':
     tablename = '2dotProperty'
     changes_tablename = '2dotProperty_Changes'
     dbname = 'property'
-    connection = mysql.connector.connect(host='localhost',
-                                         database='property',
+    connection = mysql.connector.connect(host=dbhost,
+                                         database=dbname,
                                          user=dbusername,
                                          password=dbpassword)
 

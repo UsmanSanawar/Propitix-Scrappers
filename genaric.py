@@ -89,7 +89,7 @@ def writeInCSV(filename,csvData):
 
 def addDataToDB(data,dbname,tablename):
     # data = pd.read_csv(csvFileName)
-    db_connection_str = 'mysql+pymysql://' + dbusername + ':' + dbpassword + '@localhost/'+ dbname
+    db_connection_str = 'mysql+pymysql://' + dbusername + ':' + dbpassword + '@' + dbhost +'/'+ dbname
     db_connection = create_engine(db_connection_str)
     data.to_sql(con=db_connection, name=tablename, if_exists='append',index=False)
 

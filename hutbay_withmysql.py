@@ -189,8 +189,8 @@ if __name__== '__main__':
     changes_tablename = 'Hutbay_Changes'
     dbname = 'property'
 
-    connection = mysql.connector.connect(host='localhost',
-                                         database='property',
+    connection = mysql.connector.connect(host=dbhost,
+                                         database=dbname,
                                          user=dbusername,
                                          password=dbpassword)
 

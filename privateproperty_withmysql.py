@@ -141,8 +141,8 @@ if __name__ == '__main__':
     tablename = 'Privateproperty'
     changes_tablename = 'Privateproperty_Changes'
     dbname = 'property'
-    connection = mysql.connector.connect(host='localhost',
-                                         database='property',
+    connection = mysql.connector.connect(host=dbhost,
+                                         database=dbname,
                                          user=dbusername,
                                          password=dbpassword)
     mySql_Create_Table_Query = """CREATE TABLE {} ( 

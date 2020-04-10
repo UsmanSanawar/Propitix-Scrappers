@@ -109,8 +109,8 @@ if __name__ == '__main__':
     tablename = 'Propertypro'
     changes_tablename = 'Propertypro_Changes'
     dbname = 'property'
-    connection = mysql.connector.connect(host='localhost',
-                                         database='property',
+    connection = mysql.connector.connect(host=dbhost,
+                                         database=dbname,
                                          user=dbusername,
                                          password=dbpassword)
     mySql_Create_Table_Query = """CREATE TABLE {} ( 
