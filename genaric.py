@@ -29,6 +29,10 @@ def checkTableExists(dbcon, tablename):
 
 
 def createFile(filename,cols):
+    isDirectory = os.path.isdir(csv_path)
+    if isDirectory == False:
+        os.mkdir(csv_path)
+        print("{} directory is created".format(csv_path))
     
 #     filename = "NiraBricks.csv"
 #     li = ['Title','Address','Price','Beds','Bath','Area','URL']
@@ -122,7 +126,10 @@ def CheckForDB():
 
     mycursor = dbcon.cursor()
     try:
-        mycursor.execute("CREATE DATABASE {}".format(dbname))
+        # mycursor.execute("CREATE DATABASE {}".format(dbname))
+        mycursor.execute("CREATE DATABASE {} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci".format(dbname))
+
+        
         print("Database {} created sucessfully".format(dbname))
     except mysql.connector.DatabaseError as e:
         print("DB {} already Exist".format(dbname))

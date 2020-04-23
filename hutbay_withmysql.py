@@ -196,14 +196,14 @@ if __name__== '__main__':
     mySql_Create_Table_Query = """CREATE TABLE {} ( 
              Id int NOT NULL AUTO_INCREMENT,
              Title varchar(255) NOT NULL,
-             Address varchar(255) NOT NULL,
+             Address varchar(255),
              Price bigint NOT NULL,
              Beds int NOT NULL,
              Bath int NOT NULL,
              Toilet int NOT NULL,
              DateAdded varchar(255) NOT NULL,
              DateScrapped Date NOT NULL,
-             Reference varchar(255) NOT NULL,
+             Reference varchar(255),
              URL varchar(255) NOT NULL,
              PRIMARY KEY (Id)) """
 
