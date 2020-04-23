@@ -67,7 +67,7 @@ def checkAndUpdate(dbconn,dbname, tablename, s):
     current_Date = datetime.now()
     formatted_date = current_Date.strftime('%Y-%m-%d %H:%M:%S')
 
-    site  = s.get('https://www.hutbay.com/search?adverttypes=1%2c2&propertytypes=&query=&page=21&count=15')
+    site  = s.get('https://www.hutbay.com/search?adverttypes=1%2c2&propertytypes=&query=&page=1&count=15')
 
     while(True):
     # for i in range(3):
@@ -187,8 +187,7 @@ if __name__== '__main__':
     csvFileName = csv_path + 'HutBay.csv'
     tablename = 'Hutbay'
     changes_tablename = 'Hutbay_Changes'
-    dbname = 'property'
-
+    CheckForDB()
     connection = mysql.connector.connect(host=dbhost,
                                          database=dbname,
                                          user=dbusername,

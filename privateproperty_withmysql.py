@@ -140,7 +140,7 @@ if __name__ == '__main__':
     csvFileName = csv_path + 'privateproperty.csv'
     tablename = 'Privateproperty'
     changes_tablename = 'Privateproperty_Changes'
-    dbname = 'property'
+    CheckForDB()
     connection = mysql.connector.connect(host=dbhost,
                                          database=dbname,
                                          user=dbusername,

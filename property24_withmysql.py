@@ -161,7 +161,7 @@ if __name__ == '__main__':
     csvFileName = csv_path + 'Property24.csv'
     tablename = 'Property24'
     changes_tablename = 'Property24_Changes'
-    dbname = 'property'
+    CheckForDB()
     connection = mysql.connector.connect(host=dbhost,
                                          database=dbname,
                                          user=dbusername,

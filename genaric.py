@@ -109,3 +109,20 @@ def checkUrlInDB(url,csvRow,tablename,dbconn,insertquery):
         dbconn.commit()
 
         print("Data Inserted with url", url)
+
+
+def CheckForDB():
+    # import mysql.connector
+    # dbname = 'property'
+    dbcon = mysql.connector.connect(
+      host=dbhost,
+      user=dbusername,
+      passwd=dbpassword
+    )
+
+    mycursor = dbcon.cursor()
+    try:
+        mycursor.execute("CREATE DATABASE {}".format(dbname))
+        print("Database {} created sucessfully".format(dbname))
+    except mysql.connector.DatabaseError as e:
+        print("DB {} already Exist".format(dbname))

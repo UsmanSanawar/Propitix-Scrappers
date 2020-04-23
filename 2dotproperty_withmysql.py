@@ -108,11 +108,14 @@ if __name__ == '__main__':
     csvFileName = csv_path + '2dotProperty.csv'
     tablename = '2dotProperty'
     changes_tablename = '2dotProperty_Changes'
-    dbname = 'property'
+    # dbname = 'property'
+    CheckForDB()
     connection = mysql.connector.connect(host=dbhost,
                                          database=dbname,
                                          user=dbusername,
                                          password=dbpassword)
+
+    
 
     #  in this query datatype of some colums is set to text because the data got is too inconsistent it cannot be fit in varchar and each row is a way different from other
     #  if this script didnt work run this mysql qurry in sql console --->ALTER DATABASE database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;

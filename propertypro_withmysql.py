@@ -108,7 +108,7 @@ if __name__ == '__main__':
     csvFileName = csv_path + 'propertypro.csv'
     tablename = 'Propertypro'
     changes_tablename = 'Propertypro_Changes'
-    dbname = 'property'
+    CheckForDB()
     connection = mysql.connector.connect(host=dbhost,
                                          database=dbname,
                                          user=dbusername,

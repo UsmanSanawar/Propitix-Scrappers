@@ -4,3 +4,4 @@ csv_path = base_path + "CSV/"
 dbusername = 'root'
 dbpassword = ''
 dbhost = 'localhost'
+dbname = 'property'
