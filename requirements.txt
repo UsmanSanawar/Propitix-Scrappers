@@ -2,7 +2,7 @@ beautifulsoup4==4.8.2
 bs4==0.0.1
 jsonschema==3.2.0
 mysql-connector-python==8.0.19
-numpy==1.18.2
+numpy==1.22.0
 pandas==1.0.3
 pandocfilters==1.4.2
 Pillow==5.1.0
